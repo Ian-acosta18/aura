@@ -10,17 +10,17 @@ function Instalaciones() {
   ];
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-4">Nuestras Instalaciones</h2>
+    <div className="container mt-5 animate-fade-in">
+      <h2 className="text-center text-brand mb-4">Nuestras Instalaciones</h2>
       <p className="text-center text-muted mb-5">Conoce los espacios diseñados especialmente para tu confort</p>
-      
+
       <div className="row">
         {galeria.map(item => (
           <div key={item.id} className="col-md-6 mb-4">
             <div className="card shadow-sm border-0 h-100">
               <img src={item.img} className="card-img-top" alt={item.titulo} style={{height: '250px', objectFit: 'cover'}} />
               <div className="card-body bg-light text-center">
-                <h5 className="card-title m-0 text-dark">{item.titulo}</h5>
+                <h5 className="card-title m-0 text-brand">{item.titulo}</h5>
               </div>
             </div>
           </div>

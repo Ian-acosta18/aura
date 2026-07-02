@@ -12,19 +12,19 @@ function Productos() {
   ];
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-4">Catálogo de Productos</h2>
+    <div className="container mt-5 animate-fade-in">
+      <h2 className="text-center text-brand mb-4">Catálogo de Productos</h2>
       <p className="text-center text-muted mb-5">Lleva la experiencia del spa a tu casa</p>
 
       <div className="row">
         {catalogoProductos.map(producto => (
           <div key={producto.id} className="col-md-4 mb-4">
-            <div className="card shadow-sm h-100">
+            <div className="card shadow-sm border-0 h-100">
               <img src={producto.img} className="card-img-top p-3" alt={producto.nombre} style={{height: '220px', objectFit: 'contain', backgroundColor: '#f8f9fa'}} />
               <div className="card-body text-center border-top">
-                <h5 className="card-title text-dark">{producto.nombre}</h5>
+                <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text text-muted small">{producto.desc}</p>
-                <button className="btn btn-outline-danger w-100 mt-2">Consultar en Recepción</button>
+                <button className="btn btn-outline-brand w-100 mt-2">Consultar en Recepción</button>
               </div>
             </div>
           </div>

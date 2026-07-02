@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Inicio from './pages/Inicio';
+import Nosotros from './pages/Nosotros';
 import Instalaciones from './pages/Instalaciones';
 import Servicios from './pages/Servicios';
 import Productos from './pages/Productos';
@@ -16,6 +17,7 @@ function App() {
         <main className="flex-fill pb-5">
           <Routes>
             <Route path="/" element={<Inicio />} />
+            <Route path="/nosotros" element={<Nosotros />} />
             <Route path="/instalaciones" element={<Instalaciones />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/productos" element={<Productos />} />
@@ -23,9 +25,11 @@ function App() {
             <Route path="/reservaciones" element={<Reservaciones />} />
           </Routes>
         </main>
-        <footer className="bg-dark text-white py-5 mt-auto">
+        <footer className="footer-aura py-5 mt-auto">
           <div className="container text-center">
-            <p>© 2024 Aura Beauty & Spa. Todos los derechos reservados.</p>
+            <p className="footer-brand mb-3">Aura Beauty & Spa</p>
+            <p className="mb-1">Av. Siempre Viva 123, Colonia Centro · +52 55 1234 5678</p>
+            <p className="mb-0 small opacity-75">© 2024 Aura Beauty & Spa. Todos los derechos reservados.</p>
           </div>
         </footer>
       </div>

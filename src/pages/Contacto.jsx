@@ -13,13 +13,13 @@ function Contacto() {
   };
 
   return (
-    <div className="container mt-5">
-      <h2 className="text-center mb-5">Contáctanos</h2>
+    <div className="container mt-5 animate-fade-in">
+      <h2 className="text-center text-brand mb-5">Contáctanos</h2>
       <div className="row">
         <div className="col-md-5 mb-4">
           <div className="card shadow-sm border-0 bg-light h-100">
             <div className="card-body p-4">
-              <h4 className="text-danger mb-4">Información de Contacto</h4>
+              <h4 className="text-brand mb-4">Información de Contacto</h4>
               <p>📍 Av. Siempre Viva 123, Colonia Centro</p>
               <p>📞 +52 55 1234 5678</p>
               <p>✉️ contacto@aurabeautyspa.com</p>
@@ -44,7 +44,7 @@ function Contacto() {
                   <label>Mensaje</label>
                   <textarea rows="4" className="form-control" value={datos.mensaje} onChange={e => setDatos({...datos, mensaje: e.target.value})}></textarea>
                 </div>
-                <button type="submit" className="btn btn-dark w-100">Enviar Mensaje</button>
+                <button type="submit" className="btn btn-brand w-100">Enviar Mensaje</button>
               </form>
             </div>
           </div>

@@ -560,6 +560,132 @@ footer .social-links a:hover {
 */
 
 
+/* ============================================
+--- UTILIDADES DE MARCA (usadas por los componentes React) ---
+============================================
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-titulos);
+}
+
+.text-brand { color: var(--color-principal) !important; }
+.bg-brand { background-color: var(--color-principal) !important; }
+.border-brand { border-color: var(--color-principal) !important; }
+
+.btn-brand {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
+}
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: #a57c6b;
+    border-color: #a57c6b;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.btn-outline-brand {
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-brand:hover {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+.badge-brand {
+    background-color: var(--color-principal) !important;
+    color: #fff;
+}
+
+/* --- Navbar --- */
+.navbar-brand-aura {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    color: var(--color-principal) !important;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    color: var(--color-texto);
+    font-weight: 400;
+    margin: 0 0.25rem;
+    position: relative;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--color-principal);
+}
+
+.navbar .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--color-principal);
+    border-radius: 2px;
+}
+
+.navbar-toggler {
+    border-color: var(--color-acento-claro);
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(var(--color-principal-rgb), 0.35);
+}
+
+/* --- Animación de aparición suave --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* --- Tarjetas de característica (página Inicio) --- */
+.feature-card {
+    background-color: var(--color-tarjeta);
+    border: 1px solid var(--color-acento-claro);
+    border-radius: 12px;
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 8px 20px rgba(92, 75, 69, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(92, 75, 69, 0.13);
+}
+.feature-card .feature-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Footer --- */
+.footer-aura {
+    background-color: var(--color-texto);
+    color: #fff;
+}
+.footer-aura .footer-brand {
+    font-family: var(--fuente-cursiva);
+    font-size: 1.8rem;
+    color: #fff;
+}
+.footer-aura a {
+    color: #f1e7e2;
+    text-decoration: none;
+}
+.footer-aura a:hover {
+    color: var(--color-principal);
+}
+
 /* Clases de accesibilidad */
 .sr-only {
     position: absolute;

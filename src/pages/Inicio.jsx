@@ -1,24 +1,46 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Inicio() {
   return (
-    <div className="p-8 text-center animate-fade-in flex flex-col items-center justify-center min-h-[60vh]">
-      <h1 className="text-4xl md:text-5xl font-bold text-pink-600 mb-6">Bienvenido a Aura Beauty & Spa</h1>
-      <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-        Descubre tu mejor versión en nuestro santuario de belleza y relajación. 
-        Ofrecemos tratamientos exclusivos diseñados para revitalizar tu cuerpo y mente, en un ambiente diseñado para tu paz interior.
-      </p>
-      
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
-        <div className="bg-pink-50 p-8 rounded-xl border border-pink-100 hover:shadow-md transition-shadow text-left">
-          <div className="text-3xl mb-4">🌸</div>
-          <h3 className="font-semibold text-pink-800 text-2xl mb-2">Relajación Total</h3>
-          <p className="text-gray-600">Masajes terapéuticos, aromaterapia y circuitos de agua para liberar la tensión acumulada.</p>
+    <div className="container animate-fade-in">
+      <div className="hero-inicio">
+        <div className="hero-imagen-decorativa">
+          <img src="/imagen/spa1.jpg" alt="Interior del spa Aura Beauty & Spa" />
         </div>
-        <div className="bg-purple-50 p-8 rounded-xl border border-purple-100 hover:shadow-md transition-shadow text-left">
-          <div className="text-3xl mb-4">✨</div>
-          <h3 className="font-semibold text-purple-800 text-2xl mb-2">Cuidado Estético</h3>
-          <p className="text-gray-600">Tratamientos faciales rejuvenecedores, limpieza profunda y cuidado corporal avanzado.</p>
+        <div className="hero-contenido-inicio">
+          <h1>Bienvenido a Aura Beauty & Spa</h1>
+          <p>
+            Descubre tu mejor versión en nuestro santuario de belleza y relajación.
+            Ofrecemos tratamientos exclusivos diseñados para revitalizar tu cuerpo y
+            mente, en un ambiente pensado para tu paz interior.
+          </p>
+          <Link to="/reservaciones" className="btn-inicio-reserva">
+            Agenda tu Cita
+          </Link>
+        </div>
+      </div>
+
+      <div className="row g-4 mt-3 mb-5">
+        <div className="col-md-6">
+          <div className="feature-card">
+            <div className="feature-icon">🌸</div>
+            <h3 className="text-brand h4 mb-2">Relajación Total</h3>
+            <p className="text-muted mb-0">
+              Masajes terapéuticos, aromaterapia y circuitos de agua para liberar la
+              tensión acumulada.
+            </p>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="feature-card">
+            <div className="feature-icon">✨</div>
+            <h3 className="text-brand h4 mb-2">Cuidado Estético</h3>
+            <p className="text-muted mb-0">
+              Tratamientos faciales rejuvenecedores, limpieza profunda y cuidado
+              corporal avanzado.
+            </p>
+          </div>
         </div>
       </div>
     </div>
